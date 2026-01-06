@@ -59,18 +59,18 @@ uvicorn main:app --reload
   "Age": 45
 }
 ```
-**Контейнеризация API с Docker**
+## **Контейнеризация API с Docker**
 Сборка Docker-образа
 ```bash
 docker build -t diabetes-prediction-model .
 ```
 
-**Запуск контейнера**
+## **Запуск контейнера**
 ```bash
 docker run -p 8000:8000 diabetes-prediction-model
 ```
 
-**Развертывание в Kubernetes**
+## **Развертывание в Kubernetes**
 ```bash
 kubectl apply -f diabetes-prediction-model-deployment.yaml
 ```
