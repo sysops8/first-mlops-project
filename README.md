@@ -1,66 +1,42 @@
-# Diabetes Prediction Model – Your First MLOps Project (FastAPI + Docker + K8s)
+### Модель прогнозирования диабета — ваш первый MLOps-проект (FastAPI + Docker + K8s)
 
+# Этот проект помогает изучить создание и развертывание ML-модели на простом и приближенном к реальности примере: прогнозирование наличия диабета у человека на основе медицинских показателей. Мы пройдем весь путь:
 
-This project helps you learn **Building and Deploying an ML Model** using a simple and real-world use case: predicting whether a person is diabetic based on health metrics. We’ll go from:
+✅ Обучение модели
+✅ Сборка модели локально
+✅ Развертывание API с помощью FastAPI
+✅ Контейнеризация с Docker
+✅ Развертывание в Kubernetes
 
-- ✅ Model Training
-- ✅ Building the Model locally
-- ✅ API Deployment with FastAPI
-- ✅ Dockerization
-- ✅ Kubernetes Deployment
+***Задача**
 
----
+Предсказать, есть ли у человека диабет, на основе следующих параметров:
+Количество беременностей (Pregnancies)
+Уровень глюкозы (Glucose)
+Артериальное давление (Blood Pressure)
+Индекс массы тела — BMI
+Возраст (Age)
+Используется классификатор Random Forest, обученный на датасете Pima Indians Diabetes Dataset.
 
-##  Problem Statement
-
-Predict if a person is diabetic based on:
-- Pregnancies
-- Glucose
-- Blood Pressure
-- BMI
-- Age
-
-We use a Random Forest Classifier trained on the **Pima Indians Diabetes Dataset**.
-
----
-
-##  Quick Start
-
-### 1. Clone the Repo
-
-```bash
+**Быстрый старт**
+1. Клонировать репозиторий
 git clone https://github.com/iam-veeramalla/first-mlops-project.git
 cd first-mlops-project
-```
 
-### 2. Create Virtual Environment
-
-```
+2. Создать виртуальное окружение
 python3 -m venv .mlops
 source .mlops/bin/activate
-```
 
-### 3. Install Dependencies
-
-```
+3. Установить зависимости
 pip install -r requirements.txt
-```
 
-## Train the Model
-
-```
+**Обучение модели**
 python train.py
-```
 
-## Run the API Locally
-
-```
+**Запуск API локально**
 uvicorn main:app --reload
-```
 
-### Sample Input for /predict
-
-```
+Пример входных данных для /predict
 {
   "Pregnancies": 2,
   "Glucose": 130,
@@ -68,31 +44,13 @@ uvicorn main:app --reload
   "BMI": 28.5,
   "Age": 45
 }
-```
 
-## Dockerize the API
-
-### Build the Docker Image
-
-```
+**Контейнеризация API с Docker**
+Сборка Docker-образа
 docker build -t diabetes-prediction-model .
-```
 
-### Run the Container
-
-```
+**Запуск контейнера**
 docker run -p 8000:8000 diabetes-prediction-model
-```
 
-## Deploy to Kubernetes
-
-```
+**Развертывание в Kubernetes**
 kubectl apply -f diabetes-prediction-model-deployment.yaml
-```
-
-
-
-Created by `ABHISHEK VEERAMALLA`
-
-Subscribe for more DevOps + MLOps content on the YouTube Channel - `Abhishek.Veeramalla`
-
