@@ -39,7 +39,7 @@ source .mlops/bin/activate
 pip install -r requirements.txt
 ```
 
-**Обучение модели**
+## Обучение модели
 ```bash
 python train.py
 ```
