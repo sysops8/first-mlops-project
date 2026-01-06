@@ -8,7 +8,7 @@
 ✅ Контейнеризация с Docker
 ✅ Развертывание в Kubernetes
 ```
-#### Задача
+## Задача
 
 Предсказать, есть ли у человека диабет, на основе следующих параметров:
 
@@ -21,7 +21,7 @@
 ```
 Используется классификатор Random Forest, обученный на датасете Pima Indians Diabetes Dataset.
 
-#### Быстрый старт
+## Быстрый старт
 1. Клонировать репозиторий
 ```bash
 git clone https://github.com/iam-veeramalla/first-mlops-project.git
