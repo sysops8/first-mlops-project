@@ -79,5 +79,5 @@ docker run -p 8000:8000 diabetes-prediction-model
 
 ## **Развертывание в Kubernetes**
 ```bash
-kubectl apply -f diabetes-prediction-model-deployment.yaml
+kubectl apply -f k8s-deploy.yml
 ```
