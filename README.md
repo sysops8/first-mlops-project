@@ -118,7 +118,7 @@
 ## Быстрый старт
 1. Клонировать репозиторий
 ```bash
-git clone https://github.com/iam-veeramalla/first-mlops-project.git
+git clone https://github.com/sysops8/first-mlops-project.git
 cd first-mlops-project
 ```
 
